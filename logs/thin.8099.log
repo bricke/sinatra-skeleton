@@ -1,0 +1,6 @@
+Writing PID to /var/www/skyflo_prod_app/logs/thin.8099.pid
+Changing process privilege to deployer:www
+Couldn't change user and group to deployer:www: Operation not permitted @ chown_internal - /var/www/skyflo_prod_app/logs/thin.8099.pid
+Thin web server (v1.6.3 codename Protein Powder)
+Maximum connections set to 25
+Listening on 127.0.0.1:8099, CTRL+C to stop

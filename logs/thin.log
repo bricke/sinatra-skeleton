@@ -1,0 +1,20 @@
+Writing PID to /var/www/skyflo_prod_app/logs/thin.pid
+Changing process privilege to deployer:www
+Exiting!
+/usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- sinatra/base (LoadError)
+	from /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /var/www/skyflo_prod_app/app.rb:2:in `<top (required)>'
+	from /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from config.ru:1:in `block in <main>'
+	from /usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `instance_eval'
+	from /usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /usr/lib/ruby/vendor_ruby/rack/adapter/loader.rb:33:in `eval'
+	from /usr/lib/ruby/vendor_ruby/rack/adapter/loader.rb:33:in `load'
+	from /usr/lib/ruby/vendor_ruby/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /usr/lib/ruby/vendor_ruby/thin/controllers/controller.rb:72:in `start'
+	from /usr/lib/ruby/vendor_ruby/thin/runner.rb:200:in `run_command'
+	from /usr/lib/ruby/vendor_ruby/thin/runner.rb:156:in `run!'
+	from /usr/bin/thin:6:in `<main>'
