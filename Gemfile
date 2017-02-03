@@ -3,3 +3,7 @@ gem 'rack'
 gem 'sinatra'
 gem 'activerecord'
 gem 'concurrent-ruby'
+gem 'sqlite3'
+gem 'bcrypt'
+gem "sinatra-activerecord"
+gem 'rake'
