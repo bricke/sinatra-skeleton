@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= erb :'layout/head' %>
+  </head>
+
+  <body>
+    <div class="page-content">
+      <div class="row">
+		      <div class="col-md-2">
+            <%= erb :'layout/sidebar' %>
+          </div>
+          <div class="col-md-10">
+            <%= yield %>
+            fuck
+          </div>
+      </div>
+      </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@ require "./configs/settings.rb"
 cwd = File.dirname(__FILE__)
 
 configure do
-  set :layout, :'layout/pjax'
+  #set :layout, :'layout/pjax'
   set :public_folder, Proc.new { File.join(root, "public") }
   set :environment, $SETTINGS[:environment]
   set :views, Proc.new { File.join(root, "app", "views") }
@@ -15,12 +15,10 @@ configure do
   set :lock, true
 end
 
-use Rack::Session::Cookie, :key => 'prod.session',
+use Rack::Session::Cookie, :key => 'skeleton.session',
                            :path => '/',
                            :expire_after => 10800, #3h
                            :secret => '12345678901234567890'
-
-
 # DB Configuration
 ActiveRecord::Base.establish_connection $SETTINGS[:active_record]
 ActiveRecord::Base.include_root_in_json = false
@@ -28,7 +26,7 @@ ActiveRecord::Base.include_root_in_json = false
 if c = ActiveRecord::Base.connection
   # see http://www.sqlite.org/pragma.html for details
   # Journal mode for database, WAL=write-ahead log
-  c.execute 'PRAGMA main.journal_mode=WAL;'
+  # c.execute 'PRAGMA main.journal_mode=WAL;'
 end
 
 # Load all models
@@ -50,4 +48,5 @@ end
 
 after do
   ActiveRecord::Base.clear_active_connections!
+  session.clear
 end
