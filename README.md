@@ -1,2 +1,6 @@
 # sinatra-skeleton
-Sinatra app skeleton with auth
+Sinatra app skeleton
+
+My personal Skeleton for a Sinatra app with Authentication
+
+More to come.
